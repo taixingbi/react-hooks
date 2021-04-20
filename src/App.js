@@ -1,77 +1,57 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
-const login= ()=> {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [count, setCount] = useState(0);
+import home from './home';
+//hooks
+import demo from './hooks/demo/index';
+import DemoClock from './hooks/demoClock/index';
 
-  useEffect(() => {
-    alert("useState:"+password);
-  }, []);
+//useState
+import hello from './hooks/useState/hello';
+import count1 from './hooks/useState/count1';
+import count2 from './hooks/useState/count2';
 
-  const handleClick = ()=>{
-  
+//reducer
+import add from './hooks/reducer/add';
+import count from './hooks/reducer/count';
 
-    //  alert("password: "+password);
-    //  alert("email: "+email);
-  }
+//redux
+import redux from './hooks/redux/redux';
 
-  const Form =() =>{
-    return (
-    <form>
-      <input
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        placeholder="Email address"
-        type="email"
-        name="email"
-        required
-      />
-      <input
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-        placeholder="Password"
-        type="password"
-        name="password"
-        required
-      />
-      <button  onClick={()=>handleClick} > Submit </button>
-    </form>
-    )
-  }
+import login from './hooks/useState/login';
+//test
+import demo_ from './test/demo';
 
-  const Print =() =>{
-    return (
-      <div>
-        <div>
-        {"email: " + email}
-        </div>
-        <div>
-        {"password: " + password}
-        </div>
-      </div>  
-    )
-  }
-
-  const Count =() =>{
-    return (
-      <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div> 
-    )
-  }
-
+function App() {
   return (
-    <div>
-      {Form()}
-      {Print()}
-      {Count()}
 
-    </div>
+        <Router>
+            <Switch>
+            {/* hooks */}
+            <Route path="/hooks/demo/index" component={demo} />
+            <Route path="/hooks/demoClock/index" component={DemoClock} />
+
+            {/* usestate */}
+            <Route path="/hooks/useState/hello" component={hello} />
+            <Route path="/hooks/useState/count1" component={count1} />
+            <Route path="/hooks/useState/count2" component={count2} />
+            <Route path="/hooks/useState/login" component={login} />
+
+            {/* reducer */}
+            <Route path="/hooks/reducer/add" component={add} />
+            <Route path="/hooks/reducer/count" component={count} />
+
+            <Route path="/redux" component={redux} />
+
+
+            <Route path="/test/demo" component={demo_} />
+
+
+            <Route path="/" component={home} />
+            </Switch>
+        </Router>
   );
 }
-export default login;
+
+export default App;
