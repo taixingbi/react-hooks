@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Flexbox from 'flexbox-react';
 
-import styles from './public/css.js';
-
 
 export default class home extends Component {
 
@@ -16,7 +14,7 @@ export default class home extends Component {
             <a href="/test" >test</a>
           <Flexbox flexDirection="column">
             <h3> hooks </h3>
-            <a href="/hooks/demoClock/index" >DemoClock</a>
+            <a href="/hooks/demoClock/index" >demo clock</a>
             <a href="/hooks/demo/index" >demo</a>
 
             <h5> useState </h5>
@@ -28,6 +26,9 @@ export default class home extends Component {
             <h5> reducer </h5>
             <a href="/hooks/reducer/add" >add</a>
             <a href="/hooks/reducer/count" >count</a>
+
+            <h5> css </h5>
+            <a href="/hooks/css/styles" >styles</a>
           </Flexbox>
 
           <Flexbox flexDirection="column">
@@ -36,7 +37,7 @@ export default class home extends Component {
           </Flexbox>
 
           <Flexbox flexDirection="column">
-            <h3> test </h3>
+            <h5> test </h5>
             <a href="/test/demo" >demo</a>
           </Flexbox>
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
 import home from './home';
 //hooks
 import demo from './hooks/demo/index';
@@ -15,6 +14,9 @@ import count2 from './hooks/useState/count2';
 //reducer
 import add from './hooks/reducer/add';
 import count from './hooks/reducer/count';
+
+//css
+import styles from './hooks/css/styles';
 
 //redux
 import redux from './hooks/redux/redux';
@@ -41,6 +43,9 @@ function App() {
             {/* reducer */}
             <Route path="/hooks/reducer/add" component={add} />
             <Route path="/hooks/reducer/count" component={count} />
+
+            {/* css */}
+            <Route path="/hooks/css/styles" component={styles} />
 
             <Route path="/redux" component={redux} />
 
