@@ -22,6 +22,7 @@ import styles from './hooks/css/styles';
 import redux from './hooks/redux/redux';
 
 import login from './hooks/useState/login';
+
 //test
 import demo_ from './test/demo';
 
@@ -46,8 +47,7 @@ function App() {
 
             {/* css */}
             <Route path="/hooks/css/styles" component={styles} />
-
-            <Route path="/redux" component={redux} />
+            <Route path="/hooks/redux/redux" component={redux} />
 
 
             <Route path="/test/demo" component={demo_} />

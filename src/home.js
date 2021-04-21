@@ -10,8 +10,8 @@ export default class home extends Component {
 
   render() {
     return (
-        <div >
-            <a href="/test" >test</a>
+        <div >      
+          <hr />
           <Flexbox flexDirection="column">
             <h3> hooks </h3>
             <a href="/hooks/demoClock/index" >demo clock</a>
@@ -32,8 +32,8 @@ export default class home extends Component {
           </Flexbox>
 
           <Flexbox flexDirection="column">
-            <h3> reducer </h3>
-            <a href="/redux" >redux</a>
+            <h3> redux </h3>
+            <a href="/hooks/redux/redux" >redux</a>
           </Flexbox>
 
           <Flexbox flexDirection="column">
@@ -41,6 +41,9 @@ export default class home extends Component {
             <a href="/test/demo" >demo</a>
           </Flexbox>
 
+
+          <hr />
+          <a href="/test" >test</a>
 
         </div>
     );
